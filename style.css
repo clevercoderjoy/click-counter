@@ -1,0 +1,376 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: 'Rampart One', cursive;
+    --ff-secondary: 'ZCOOL KuaiLe', cursive;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-secondary);
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+/*  global classes */
+
+/* section */
+.section {
+    padding: 5rem 0;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vw;
+    }
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/*
+=============== 
+Counter
+===============
+*/
+
+main {
+    min-height: 70vh;
+    display: flex;
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0.2rem auto;
+}
+
+.container {
+    text-align: center;
+}
+
+#value {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.btn {
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--clr-black);
+    padding: 0.375rem 0.75rem;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: 2px solid var(--clr-black);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    margin: 0.5rem;
+    font-family: var(--font-one);
+}
+
+.btn:hover {
+    color: var(--clr-white);
+    background: var(--clr-black);
+}
+
+
+/* template applied */
+
+footer{
+    text-align: center;
+    justify-content: center;
+    margin: -2rem auto;
+}
+
+/* class about*/
+
+.about{
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: var(--font-two);
+}
+
+/* class app */
+
+.app{
+    text-align: center;
+    justify-content: center;
+    display: block;
+    font-weight: bold;
+    font-family: var(--font-one);
+    margin: 2rem;
+}
+
+/* link color */
+
+.social-link{
+    color: black;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* source */
+
+.source{
+    text-align: center;
+    margin: 0.5rem auto;
+    background: transparent;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    display: inline-block;
+    font-family: var(--font-one);
+    text-transform: uppercase;
+}
+
+/* class btn-source */
+
+.btn-source{
+    text-align: center;
+    margin: 1rem;
+}
+
+/* button (source) => hover */
+.source:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: black;
+    color: white;
+}
+
+/* class social */
+
+.social{
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+	padding: 0.5rem 0.5rem;
+    justify-content: center;
+}
+
+/* class social-list */
+
+.social-list{
+    display: inline-block;
+    margin: 0.2rem 2rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* social link color on hover */
+
+i.fa.fa-linkedin.fa-1x:hover {
+    color: #0077b5;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-github.fa-1x:hover {
+    color: #171515 ;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-stack-overflow.fa-1x:hover {
+    color: #ef8236;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-whatsapp.fa-1x:hover {
+    color: 	#075E54;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-instagram.fa-1x:hover {
+    color: 	#C13584;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+/* copyright */
+
+.copyright{
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    margin: 1.2rem;
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    background:white;
+    color: black;
+    font-family: var(--font-one);
+}
+
+.copyright:hover{
+    background:black;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.cr{
+    text-align: center;
+}
